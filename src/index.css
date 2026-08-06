@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wall-black: #0a0a0a;
+  --color-wall-paper: #f5f5f0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Utility for iOS safe-area-aware thumb-zone bars */
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 0.75rem);
+}
+
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top), 0.75rem);
+}
+
+.top-safe {
+  top: max(env(safe-area-inset-top), 1rem);
+}
+
+@keyframes heart-burst {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.animate-heart-burst {
+  animation: heart-burst 700ms ease-out forwards;
+}
